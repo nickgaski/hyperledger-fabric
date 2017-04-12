@@ -5,11 +5,13 @@ CH_NAME=$2
 CHANNELS=$3
 CHAINCODES=$4
 ENDORSERS=$5
+CH02INST=$6
 
 : ${CH_NAME:="mychannel"}
 : ${CHANNELS:="1"}
 : ${CHAINCODES:="1"}
 : ${ENDORSERS:="4"}
+: ${CH02INST:="1"}
 COMPOSE_FILE=docker-compose.yaml
 
 function printHelp () {
@@ -44,10 +46,12 @@ function removeUnwantedImages() {
 
 function networkUp () {
 	CURRENT_DIR=$PWD
+        echo "ch_name $CH_NAME"
+        echo "channels $CHANNELS"
         source generateCfgTrx.sh $CH_NAME $CHANNELS
 	cd $CURRENT_DIR
 
-	CHANNEL_NAME=$CH_NAME CHANNELS_NUM=$CHANNELS CHAINCODES_NUM=$CHAINCODES ENDORSERS_NUM=$ENDORSERS docker-compose -f $COMPOSE_FILE up -d 2>&1
+	CHANNEL_NAME=$CH_NAME CHANNELS_NUM=$CHANNELS CHAINCODES_NUM=$CHAINCODES ENDORSERS_NUM=$ENDORSERS CH02_INST=$CH02INST docker-compose -f $COMPOSE_FILE up -d 2>&1
 	if [ $? -ne 0 ]; then
 		echo "ERROR !!!! Unable to pull the images "
 		exit 1

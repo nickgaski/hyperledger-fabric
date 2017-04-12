@@ -146,7 +146,10 @@ services:
       - CORE_PEER_GOSSIP_IGNORESECURITY=true
       - CORE_PEER_LOCALMSPID=Org0MSP
     working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
-    command: /bin/bash -c './scripts/script.sh ${CHANNEL_NAME} ${CHANNELS_NUM} ${CHAINCODES_NUM} ${ENDORSERS_NUM}; '
+    #command: /bin/bash -c './scripts/script_04.sh ${CHANNEL_NAME} ${CHANNELS_NUM} ${CHAINCODES_NUM} ${ENDORSERS_NUM}; '
+    #command: /bin/bash -c './scripts/ccAPIDriver.sh ${CHANNEL_NAME} ${CHANNELS_NUM} ${CHAINCODES_NUM} ${ENDORSERS_NUM} ${CHAINCODE_NAME}; '
+    #command: /bin/bash -c './scripts/script_example05_nc.sh ${CHANNEL_NAME} ${CHANNELS_NUM} ${CHAINCODES_NUM} ${ENDORSERS_NUM} ${CH02_INST}; '
+    command: /bin/bash -c 'apt-get update && apt-get install -y python && ./scripts/script.py ${CHANNEL_NAME} ${CHANNELS_NUM} ${CHAINCODES_NUM} ${ENDORSERS_NUM}; '
     volumes:
         - /var/run/:/host/var/run/
         - ./examples/:/opt/gopath/src/github.com/hyperledger/fabric/examples/
