@@ -152,7 +152,7 @@ services:
     command: /bin/bash -c 'apt-get update && apt-get install -y python python-xmlrunner && ./scripts/script.py ${CHANNEL_NAME} ${CHANNELS_NUM} ${CHAINCODES_NUM} ${ENDORSERS_NUM}; 5000'
     volumes:
         - /var/run/:/host/var/run/
-        - ../examples/chaincode/go/:/opt/gopath/src/github.com/hyperledger/fabric/examples/chaincode/go
+        - ../chaincode/go:/opt/gopath/src/github.com/hyperledger/fabric/examples/chaincode/go/
         - ./crypto:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
         - ./scripts:/opt/gopath/src/github.com/hyperledger/fabric/peer/scripts/
     depends_on:
