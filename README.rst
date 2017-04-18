@@ -59,6 +59,7 @@ If not already done, clone the Fabric code base.
 ```
 ./scripts/e2e_test_example03.sh myc 1 1 4 instantiate
 ```
+
 where e2e_test_example03.sh is the shell script that has cli commands, like for instance here we are running chaincode_example03 instantiate command
 
 ### After the tests are run 
