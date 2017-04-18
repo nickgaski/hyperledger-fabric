@@ -19,13 +19,11 @@ its corresponding network entities.
 Currently we test following example chaincodes in single e2e flow:
 
 ```
-
 ## example-chaincode     bash-script                Very Brief One line description of chanicode function
 ===================================================================================================================
 chaincode_example02    e2e_test_example02.sh    basic chaincode where value X is moved from asser A to asset B
 chaincode_example03    e2e_test_example03.sh    -ve test case where a query is invalidated
 chaincode_example04    e2e_test_example04.sh    chaincode calling chaincode on an event occurring in chaincode
-
 ```
 
 These individual bash scripts are then wrapped inside script.py under "./scripts" folder and executed sequentially in a single test.
@@ -39,7 +37,6 @@ script.py is called as a command from docker-compose.yaml file.
 If not already done, clone the Fabric code base.
 
 ```
-
  git clone https://github.com/hyperledger/fabric.git
 
  cd fabric
@@ -49,16 +46,12 @@ If not already done, clone the Fabric code base.
  cd test/regression/daily/exampleChaincodes
  
  ./network_setup <up|down|retstart> [channel-name] [total-channels [chaincodes] [endorsers count]
- 
 ```
 
 ### sample command
 
 ```
-
  ./network_setup up myc 1 1 4
- 
-
 ```
 
 ### output of each of the steps on executing python script looks like 
