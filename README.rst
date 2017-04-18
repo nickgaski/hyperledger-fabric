@@ -27,7 +27,7 @@ Currently we test following example chaincodes in single e2e flow:
 +---------------------+-------------------------+--------------------------------------------------------------+              
 | chaincode_example04 |  e2e_test_example04.sh  | chaincode calling chaincode on occurrence of an evnt         |
 +---------------------+-------------------------+--------------------------------------------------------------+
-| marbles02           |  e2e_test_marbles02.sh  | init, transfer, query operations from marbles02 chaincode         |
+| marbles02           |  e2e_test_marbles02.sh  | init, transfer, query operations from marbles02 chaincode    |
 +---------------------+-------------------------+--------------------------------------------------------------+      
         
 These individual bash scripts are then wrapped inside script.py under "./scripts" folder and executed sequentially in a single test.
