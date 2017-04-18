@@ -20,7 +20,7 @@ Currently we test following example chaincodes in single e2e flow:
 
 ```
 
-##example-chaincode     bash-script                Very Brief One line description of chanicode function
+## example-chaincode     bash-script                Very Brief One line description of chanicode function
 ===================================================================================================================
 chaincode_example02    e2e_test_example02.sh    basic chaincode where value X is moved from asser A to asset B
 chaincode_example03    e2e_test_example03.sh    -ve test case where a query is invalidated
@@ -34,7 +34,7 @@ script.py is called as a command from docker-compose.yaml file.
 
 ------------------------------------------------------------------------------------------------------------
 
-###To run exampleChaincode tests 
+### To run exampleChaincode tests 
 
 If not already done, clone the Fabric code base.
 
@@ -48,22 +48,21 @@ If not already done, clone the Fabric code base.
  cd test/regression/daily/exampleChaincodes
  
  ./network_setup <up|down|retstart> [channel-name] [total-channels [chaincodes] [endorsers count]
-
 ```
 
-###sample command
+### sample command
 
 ```
  ./network_setup up myc 1 1 4
 
 ```
 
-###output of each of the steps on executing python script looks like 
+### output of each of the steps on executing python script looks like 
 
 ```
 ./scripts/e2e_test_example03.sh myc 1 1 4 instantiate
 ```
 where e2e_test_example03.sh is the shell script that has cli commands, like for instance here we are running chaincode_example03 instantiate command
 
-###After the tests are run 
+### After the tests are run 
   ./network_setup.sh down
