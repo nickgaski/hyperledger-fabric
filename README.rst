@@ -36,7 +36,8 @@ script.py is called as a command from docker-compose.yaml file.
 
 If not already done, clone the Fabric code base.
 
-```
+.. code:: bash
+
  git clone https://github.com/hyperledger/fabric.git
 
  cd fabric
@@ -46,21 +47,22 @@ If not already done, clone the Fabric code base.
  cd test/regression/daily/exampleChaincodes
  
  ./network_setup <up|down|retstart> [channel-name] [total-channels [chaincodes] [endorsers count]
-```
+
 
 ### sample command
 
-```
+.. code:: bash
+
  ./network_setup up myc 1 1 4
-```
 
 ### output of each of the steps on executing python script looks like 
 
-```
+.. code:: bash
+
 ./scripts/e2e_test_example03.sh myc 1 1 4 instantiate
-```
+
 
 where e2e_test_example03.sh is the shell script that has cli commands, like for instance here we are running chaincode_example03 instantiate command
 
-### After the tests are run 
+### To deactivate docker network 
   ./network_setup.sh down
