@@ -18,12 +18,27 @@ its corresponding network entities.
 
 Currently we test following example chaincodes in single e2e flow:
 
-.. code:: bash
++---------------------+-------------------------+------------------------------------------------------- +
+| example-chaincode   | bash-script             | Very Brief One line description of chanicode function  |
+|                     |                         |                                                        |
++=====================+=========================+========================================================+
 
-example-chaincode     bash-script                Very Brief One line description of chanicode function
+ +---------------------------+---------------------+------------------+----------------+--------------------------------+
+| Name                      | Gerrit              | GitHub           | Slack          | email                          |
++===========================+=====================+==================+================+================================+
+| Binh Nguyen               | binhn               | binhn            | binhn          | binhn@us.ibm.com               |
++---------------------------+---------------------+------------------+----------------+--------------------------------+
+| Chris Ferris              | ChristopherFerris   | christo4ferris   | cbf            | chris.ferris@gmail.com         |
++---------------------------+---------------------+------------------+----------------+--------------------------------+
+| Gabor Hosszu              | hgabre              | gabre            | hgabor         | gabor@digitalasset.com         |
++---------------------------+---------------------+------------------+----------------+--------------------------------+
+| Gari Singh                | mastersingh24       | mastersingh24    | garisingh      | gari.r.singh@gmail.com         |
++---------------------------+---------------------+------------------+----------------+--------------------------------+
+| Greg Haskins              | greg.haskins        | ghaskins         | ghaskins       | gregory.haskins@gmail.com      |
++---------------------------+---------------------+------------------+----------------+--------------------------------+                    
 
-chaincode_example02    e2e_test_example02.sh    basic chaincode where value X is moved from asser A to asset B
-chaincode_example03    e2e_test_example03.sh    -ve test case where a query is invalidated
+       
+        
 chaincode_example04    e2e_test_example04.sh    chaincode calling chaincode on an event occurring in chaincode
 
 
