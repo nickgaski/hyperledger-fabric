@@ -66,6 +66,7 @@ output of each of the steps on executing python script looks like
 where e2e_test_example03.sh is the shell script that has cli commands, like for instance here we are running chaincode_example03 instantiate command
 
 To deactivate docker network 
+
 .. code:: bash
 
   ./network_setup.sh down
