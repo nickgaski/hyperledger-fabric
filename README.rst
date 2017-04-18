@@ -1,4 +1,4 @@
-# End-to-End CLI tests on example chaincodes that exist on fabric examples folder
+End-to-End CLI tests on example chaincodes that exist on fabric examples folder
 =================================================================================
 
 This test provides e2e test coverage for each chaincode example under fabric/examples/.
@@ -18,9 +18,10 @@ its corresponding network entities.
 
 Currently we test following example chaincodes in single e2e flow:
 
+.. code:: bash
 
-## example-chaincode     bash-script                Very Brief One line description of chanicode function
-===================================================================================================================
+example-chaincode     bash-script                Very Brief One line description of chanicode function
+
 chaincode_example02    e2e_test_example02.sh    basic chaincode where value X is moved from asser A to asset B
 chaincode_example03    e2e_test_example03.sh    -ve test case where a query is invalidated
 chaincode_example04    e2e_test_example04.sh    chaincode calling chaincode on an event occurring in chaincode
@@ -49,13 +50,13 @@ If not already done, clone the Fabric code base.
  ./network_setup <up|down|retstart> [channel-name] [total-channels [chaincodes] [endorsers count]
 
 
-### sample command
+sample command
 
 .. code:: bash
 
  ./network_setup up myc 1 1 4
 
-### output of each of the steps on executing python script looks like 
+output of each of the steps on executing python script looks like 
 
 .. code:: bash
 
@@ -64,5 +65,7 @@ If not already done, clone the Fabric code base.
 
 where e2e_test_example03.sh is the shell script that has cli commands, like for instance here we are running chaincode_example03 instantiate command
 
-### To deactivate docker network 
+To deactivate docker network 
+.. code:: bash
+
   ./network_setup.sh down
