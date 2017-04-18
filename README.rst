@@ -37,7 +37,6 @@ script.py is called as a command from docker-compose.yaml file.
 If not already done, clone the Fabric code base.
 
 ```
-
  git clone https://github.com/hyperledger/fabric.git
 
  cd fabric
@@ -52,7 +51,6 @@ If not already done, clone the Fabric code base.
 ### sample command
 
 ```
-
  ./network_setup up myc 1 1 4
 ```
 
