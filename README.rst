@@ -18,30 +18,18 @@ its corresponding network entities.
 
 Currently we test following example chaincodes in single e2e flow:
 
-+---------------------+-------------------------+------------------------------------------------------- +
-| example-chaincode   | bash-script             | Very Brief One line description of chanicode function  |
-|                     |                         |                                                        |
-+=====================+=========================+========================================================+
-
- +---------------------------+---------------------+------------------+----------------+--------------------------------+
-| Name                      | Gerrit              | GitHub           | Slack          | email                          |
-+===========================+=====================+==================+================+================================+
-| Binh Nguyen               | binhn               | binhn            | binhn          | binhn@us.ibm.com               |
-+---------------------------+---------------------+------------------+----------------+--------------------------------+
-| Chris Ferris              | ChristopherFerris   | christo4ferris   | cbf            | chris.ferris@gmail.com         |
-+---------------------------+---------------------+------------------+----------------+--------------------------------+
-| Gabor Hosszu              | hgabre              | gabre            | hgabor         | gabor@digitalasset.com         |
-+---------------------------+---------------------+------------------+----------------+--------------------------------+
-| Gari Singh                | mastersingh24       | mastersingh24    | garisingh      | gari.r.singh@gmail.com         |
-+---------------------------+---------------------+------------------+----------------+--------------------------------+
-| Greg Haskins              | greg.haskins        | ghaskins         | ghaskins       | gregory.haskins@gmail.com      |
-+---------------------------+---------------------+------------------+----------------+--------------------------------+                    
-
-       
++---------------------+-------------------------+--------------------------------------------------------------+
+| example-chaincode   | bash-script             | Very Brief One line description of chanicode function        |
++=====================+=============+==========================================================================+
+| chaincode_example02 |  e2e_test_example02.sh  | basic chaincode where value X is moved from asset A to asset B
++---------------------+-------------------------+--------------------------------------------------------------+
+| chaincode_example03 |  e2e_test_example03.sh  | -ve test case where a basic query is illegal                 |
++---------------------+-------------------------+--------------------------------------------------------------+              
+| chaincode_example04 |  e2e_test_example04.sh  | chaincode calling chaincode on occurrence of an evnt         |
++---------------------+-------------------------+--------------------------------------------------------------+
+| marbles02           |  e2e_test_marbles02.sh  | init, transfer, query operations from marbles02 chaincode         |
++---------------------+-------------------------+--------------------------------------------------------------+      
         
-chaincode_example04    e2e_test_example04.sh    chaincode calling chaincode on an event occurring in chaincode
-
-
 These individual bash scripts are then wrapped inside script.py under "./scripts" folder and executed sequentially in a single test.
 
 script.py is called as a command from docker-compose.yaml file.
