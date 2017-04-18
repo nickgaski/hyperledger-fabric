@@ -52,6 +52,7 @@ If not already done, clone the Fabric code base.
 ### sample command
 
 ```
+
  ./network_setup up myc 1 1 4
 ```
 
